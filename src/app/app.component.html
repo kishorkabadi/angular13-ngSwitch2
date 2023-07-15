@@ -1,0 +1,17 @@
+<app-top-bar></app-top-bar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<div>
+  <h4>Switch Example</h4>
+  <input type="text" name="rdio1" #titleInput />
+  <input type="button" (click)="changevalue(titleInput.value)" value="Click" />
+
+  <div [ngSwitch]="choose">
+    <h3 *ngSwitchCase="'One'">First</h3>
+    <h3 *ngSwitchCase="'Two'">Second</h3>
+    <h3 *ngSwitchCase="'Three'">Third</h3>
+    <h3 *ngSwitchDefault>Default</h3>
+  </div>
+</div>
